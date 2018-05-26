@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="system">
+            <group id="smtp">
+                <field id="hijack_enabled" translate="label comment"
+                       type="select" sortOrder="100"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Email Hijacking</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Switch on/off development mode for emails. All emails will be hijacked and will be sent to
+                        developer address.
+                    </comment>
+                    <depends>
+                        <field id="disable">0</field>
+                    </depends>
+                </field>
+                <field id="hijack_emails" translate="label"
+                       type="text" sortOrder="200"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Developers Emails</label>
+                    <comment>Email addresses (comma separated) to receive hijacked emails.</comment>
+                    <depends>
+                        <field id="disable">0</field>
+                        <field id="hijack_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
