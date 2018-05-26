@@ -1,6 +1,6 @@
 {
   "name": "flancer32/mage2_ext_email_hijack",
-  "description": "Hijack all emails being sent by Magento and redirect it to developers.",
+  "description": "Hijack all emails being sent by Magento and forward its to developers.",
   "type": "magento2-module",
   "homepage": "https://github.com/flancer32/mage2_ext_email_hijack",
   "license": "GPL-3.0-only",
