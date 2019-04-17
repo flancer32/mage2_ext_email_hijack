@@ -4,8 +4,8 @@ Hijack all emails being sent by Magento and forward its to developers.
 
 This module allows to intercept all emails being sent by Magento 2 and redirect to developers email addresses.
 Original addresses are converted into recipient names:
-* _0_Customer First::cust1.at.gmail.com Customer Second::cust2.at.mail.com <dev1@mail.com>
-* _1_Customer First::cust1.at.gmail.com Customer Second::cust2.at.mail.com <dev2@mail.com>
+* Customer First::cust1.at.gmail.com Customer Second::cust2.at.mail.com <dev1@mail.com>
+* Customer First::cust1.at.gmail.com Customer Second::cust2.at.mail.com <dev2@mail.com>
 
 
 
