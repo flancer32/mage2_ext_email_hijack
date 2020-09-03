@@ -14,12 +14,12 @@ class ConfigTest
     /** @var \Flancer32\EmailHijack\Helper\Config */
     private $obj;
 
-    protected function setUp()
-    {
-        /** Get object to test */
-        $obm = \Magento\Framework\App\ObjectManager::getInstance();
-        $this->obj = $obm->get(\Flancer32\EmailHijack\Helper\Config::class);
-    }
+//    protected function setUp()
+//    {
+//        /** Get object to test */
+//        $obm = \Magento\Framework\App\ObjectManager::getInstance();
+//        $this->obj = $obm->get(\Flancer32\EmailHijack\Helper\Config::class);
+//    }
 
 
     public function test_all()
