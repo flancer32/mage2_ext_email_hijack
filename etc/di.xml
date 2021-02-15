@@ -2,10 +2,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
-    <type name="Magento\Framework\Mail\Message">
-        <!-- Process recipients emails and replace its by developer's emails. -->
+    <type name="Magento\Framework\Mail\Template\TransportBuilder">
+        <!-- Process recipients emails and replace its by developer's emails (Magento 2.4.x). -->
         <plugin name="flancer32_email_hijack_plugin"
-                type="Flancer32\EmailHijack\Plugin\Magento\Framework\Mail\Message"
+                type="Flancer32\EmailHijack\Plugin\Magento\Framework\Mail\Template\TransportBuilder"
                 sortOrder="100" disabled="false"/>
     </type>
 
