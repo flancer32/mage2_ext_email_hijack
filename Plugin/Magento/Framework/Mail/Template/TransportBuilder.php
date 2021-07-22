@@ -23,6 +23,35 @@ class TransportBuilder {
         $this->hlpConfig = $hlpConfig;
     }
 
+    public function aroundAddBcc(
+        \Magento\Framework\Mail\Template\TransportBuilder $subject,
+        \Closure $proceed,
+        $address
+    ) {
+        $enabled = $this->hlpConfig->getHijackEnabled();
+        if ($enabled) {
+            // skip processing
+            return $subject;
+        } else {
+            return $proceed($address);
+        }
+    }
+
+    public function aroundAddCc(
+        \Magento\Framework\Mail\Template\TransportBuilder $subject,
+        \Closure $proceed,
+        $address,
+        $name = ''
+    ) {
+        $enabled = $this->hlpConfig->getHijackEnabled();
+        if ($enabled) {
+            // skip processing
+            return $subject;
+        } else {
+            return $proceed($address, $name);
+        }
+    }
+
     public function aroundAddTo(
         \Magento\Framework\Mail\Template\TransportBuilder $subject,
         \Closure $proceed,
